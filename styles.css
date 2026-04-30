@@ -972,16 +972,13 @@ p {
     overflow: hidden;
     background: var(--color-lavender-soft);
     margin-bottom: 16px;
+    aspect-ratio: 1 / 1;
 }
 
 .poster-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.poster-image {
-    aspect-ratio: 1 / 1;
 }
 
 .poster-meta {
