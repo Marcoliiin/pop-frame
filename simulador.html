@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador — POP FRAME</title>
+    <meta name="description" content="Simulador POP FRAME: anexe sua imagem, escolha o tamanho e o cenário, e veja como ficará seu pôster na parede." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">P</span>
+                <span class="brand-name">POP <em>Frame</em></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html#topo">Sobre</a>
+                <a href="index.html#categorias">Categorias</a>
+                <a href="index.html#tamanhos">Tamanhos</a>
+                <a href="simulador.html" class="nav-active">Simulador</a>
+                <a href="index.html#galeria">Galeria</a>
+                <a href="index.html#contato" class="nav-cta">Encomendar</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="simulador" class="preview preview-page">
+        <div class="container">
+            <div class="section-head">
+                <h2>Veja como ficará seu pôster</h2>
+                <p class="section-sub">Anexe sua imagem, escolha o tamanho e o cenário — a gente mostra o resultado na hora.</p>
+            </div>
+
+            <div class="preview-grid">
+                <div class="preview-controls">
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">01</span>
+                            <h3>Anexe sua imagem</h3>
+                        </div>
+                        <label class="upload-box" for="upload-input">
+                            <input type="file" id="upload-input" accept="image/*" hidden />
+                            <div class="upload-inner">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                                <span class="upload-text">Clique pra escolher arquivo</span>
+                                <span class="upload-hint" id="upload-hint">JPG, PNG ou WEBP</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">02</span>
+                            <h3>Escolha o tamanho</h3>
+                            <button type="button" class="rotate-btn" id="rotate-btn" aria-label="Girar pôster">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.7 1 6.4 2.6L21 8"/>
+                                    <polyline points="21 3 21 8 16 8"/>
+                                </svg>
+                                <span>Girar</span>
+                            </button>
+                        </div>
+                        <div class="size-options" id="size-options">
+                            <button type="button" class="size-option" data-size="30x40">
+                                <span class="size-option-num">30 × 40</span>
+                                <span class="size-option-label">Pequeno</span>
+                            </button>
+                            <button type="button" class="size-option active" data-size="45x60">
+                                <span class="size-option-num">45 × 60</span>
+                                <span class="size-option-label">Médio</span>
+                            </button>
+                            <button type="button" class="size-option" data-size="60x80">
+                                <span class="size-option-num">60 × 80</span>
+                                <span class="size-option-label">Grande</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">03</span>
+                            <h3>Escolha o cenário</h3>
+                        </div>
+                        <div class="scenario-options">
+                            <button type="button" class="scenario-option active" data-scenario="sala">
+                                <div class="scenario-thumb">
+                                    <img src="assets/mockup-sala.jpeg" alt="" />
+                                </div>
+                                <span class="scenario-label">Sala</span>
+                            </button>
+                            <button type="button" class="scenario-option disabled" disabled>
+                                <div class="scenario-thumb scenario-thumb-empty">
+                                    <span>Em breve</span>
+                                </div>
+                                <span class="scenario-label">Quarto</span>
+                            </button>
+                            <button type="button" class="scenario-option disabled" disabled>
+                                <div class="scenario-thumb scenario-thumb-empty">
+                                    <span>Em breve</span>
+                                </div>
+                                <span class="scenario-label">Setup</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-display">
+                    <div class="preview-stage">
+                        <img class="preview-bg" src="assets/mockup-sala.jpeg" alt="Cenário sala" />
+                        <div class="preview-poster" id="preview-poster">
+                            <span class="preview-empty">Anexe uma imagem<br/>pra ver o resultado</span>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Pré-visualização aproximada do tamanho real na parede.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark">P</span>
+                <span class="brand-name">POP <em>Frame</em></span>
+            </div>
+            <p class="footer-tag">Pôsteres feitos com carinho pra fãs de música, cinema, animes e cultura pop.</p>
+
+            <ul class="footer-socials">
+                <li>
+                    <a href="https://instagram.com/popframe" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com/@popframe" target="_blank" rel="noopener" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M19.5 6.8c-1.5-.3-2.8-1.2-3.5-2.5-.3-.5-.5-1.1-.5-1.7v-.3h-3v12.4c0 .5-.1 1-.4 1.4-.5.9-1.5 1.4-2.5 1.4-1.6 0-2.9-1.3-2.9-2.9s1.3-2.9 2.9-2.9c.3 0 .6 0 .9.1V8.7c-.3 0-.6-.1-.9-.1-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9V9.1c1.2.7 2.6 1.2 4 1.2v-3c-.1 0 0 0 0-.5z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5545999143864" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.4 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:popframe@gmail.com.br" aria-label="Email">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="m3 7 9 6 9-6"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer-disclaimer">
+                Não nos responsabilizamos por artes enviadas pelos clientes.<br/>
+                Reservamo-nos o direito de recusar conteúdos protegidos, ofensivos ou ilegais.
+            </p>
+
+            <p class="footer-copy">© 2026 POP FRAME. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const uploadInput   = document.getElementById('upload-input');
+            const uploadHint    = document.getElementById('upload-hint');
+            const previewPoster = document.getElementById('preview-poster');
+            const sizeOptions   = document.querySelectorAll('#size-options .size-option');
+            const rotateBtn     = document.getElementById('rotate-btn');
+
+            // Mapeamento aproximado entre o tamanho do pôster e a largura
+            // ocupada na parede do cenário (em % do palco). A versão paisagem
+            // tem largura maior pois o lado longo passa a ser a horizontal.
+            const sizeMap = {
+                portrait: {
+                    '30x40': 10,
+                    '45x60': 14,
+                    '60x80': 19
+                },
+                landscape: {
+                    '30x40': 13.3,
+                    '45x60': 18.7,
+                    '60x80': 25.3
+                }
+            };
+
+            let currentSize = '45x60';
+            let isLandscape = false;
+
+            function updatePoster() {
+                const orientation = isLandscape ? 'landscape' : 'portrait';
+                previewPoster.style.width = sizeMap[orientation][currentSize] + '%';
+                previewPoster.style.aspectRatio = isLandscape ? '4 / 3' : '3 / 4';
+            }
+
+            // Upload de imagem
+            uploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                uploadHint.textContent = file.name;
+
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    previewPoster.style.backgroundImage = `url(${ev.target.result})`;
+                    const empty = previewPoster.querySelector('.preview-empty');
+                    if (empty) empty.remove();
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Seleção de tamanho
+            sizeOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    sizeOptions.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentSize = btn.dataset.size;
+                    updatePoster();
+                });
+            });
+
+            // Girar pôster
+            rotateBtn.addEventListener('click', () => {
+                isLandscape = !isLandscape;
+                rotateBtn.classList.toggle('active', isLandscape);
+                updatePoster();
+            });
+        })();
+    </script>
+
+</body>
+</html>

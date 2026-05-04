@@ -19,7 +19,7 @@
                 <span class="brand-name">POP <em>Frame</em></span>
             </a>
             <nav class="nav">
-                <a href="#sobre">Sobre</a>
+                <a href="#topo">Sobre</a>
                 <a href="#categorias">Categorias</a>
                 <a href="#tamanhos">Tamanhos</a>
                 <a href="#simulador">Simulador</a>
@@ -187,7 +187,6 @@
 
             <div class="size-grid">
                 <article class="size-card">
-                    <span class="size-catalog">N° 01</span>
                     <div class="size-illustration">
                         <div class="size-shape size-shape-sm"></div>
                     </div>
@@ -198,7 +197,6 @@
                 </article>
 
                 <article class="size-card size-card-featured">
-                    <span class="size-catalog">N° 02</span>
                     <span class="size-best">★ Mais pedido</span>
                     <div class="size-illustration">
                         <div class="size-shape size-shape-md"></div>
@@ -210,7 +208,6 @@
                 </article>
 
                 <article class="size-card">
-                    <span class="size-catalog">N° 03</span>
                     <div class="size-illustration">
                         <div class="size-shape size-shape-lg"></div>
                     </div>
@@ -242,99 +239,40 @@
         </div>
     </section>
 
-    <section id="simulador" class="preview">
+    <section id="simulador" class="simulator-cta">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow">Simulador</span>
                 <h2>Veja como ficará seu pôster.</h2>
-                <p class="section-sub">Anexe sua imagem, escolha o tamanho e o cenário — a gente mostra o resultado na hora.</p>
+                <p class="section-sub">Anexe sua imagem, escolha o tamanho e o cenário e visualize o resultado na sua parede em segundos.</p>
             </div>
 
-            <div class="preview-grid">
-                <div class="preview-controls">
-                    <div class="preview-step">
-                        <div class="step-head">
-                            <span class="step-num">01</span>
-                            <h3>Anexe sua imagem</h3>
-                        </div>
-                        <label class="upload-box" for="upload-input">
-                            <input type="file" id="upload-input" accept="image/*" hidden />
-                            <div class="upload-inner">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                    <polyline points="17 8 12 3 7 8"/>
-                                    <line x1="12" y1="3" x2="12" y2="15"/>
-                                </svg>
-                                <span class="upload-text">Clique pra escolher arquivo</span>
-                                <span class="upload-hint" id="upload-hint">JPG, PNG ou WEBP</span>
-                            </div>
-                        </label>
-                    </div>
+            <div class="cta-card">
+                <div class="cta-content">
+                    <p class="cta-headline">Pré-visualização gratuita,<br/>sem cadastro.</p>
 
-                    <div class="preview-step">
-                        <div class="step-head">
-                            <span class="step-num">02</span>
-                            <h3>Escolha o tamanho</h3>
-                            <button type="button" class="rotate-btn" id="rotate-btn" aria-label="Girar pôster">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.7 1 6.4 2.6L21 8"/>
-                                    <polyline points="21 3 21 8 16 8"/>
-                                </svg>
-                                <span>Girar</span>
-                            </button>
-                        </div>
-                        <div class="size-options" id="size-options">
-                            <button type="button" class="size-option" data-size="30x40">
-                                <span class="size-option-num">30 × 40</span>
-                                <span class="size-option-label">Pequeno</span>
-                            </button>
-                            <button type="button" class="size-option active" data-size="45x60">
-                                <span class="size-option-num">45 × 60</span>
-                                <span class="size-option-label">Médio</span>
-                            </button>
-                            <button type="button" class="size-option" data-size="60x80">
-                                <span class="size-option-num">60 × 80</span>
-                                <span class="size-option-label">Grande</span>
-                            </button>
-                        </div>
-                    </div>
+                    <ul class="cta-features">
+                        <li><span class="cta-feat-num">01</span> Anexe sua imagem</li>
+                        <li><span class="cta-feat-num">02</span> Escolha tamanho e cenário</li>
+                        <li><span class="cta-feat-num">03</span> Visualize na parede</li>
+                    </ul>
 
-                    <div class="preview-step">
-                        <div class="step-head">
-                            <span class="step-num">03</span>
-                            <h3>Escolha o cenário</h3>
-                        </div>
-                        <div class="scenario-options">
-                            <button type="button" class="scenario-option active" data-scenario="sala">
-                                <div class="scenario-thumb">
-                                    <img src="assets/mockup-sala.jpeg" alt="" />
-                                </div>
-                                <span class="scenario-label">Sala</span>
-                            </button>
-                            <button type="button" class="scenario-option disabled" disabled>
-                                <div class="scenario-thumb scenario-thumb-empty">
-                                    <span>Em breve</span>
-                                </div>
-                                <span class="scenario-label">Quarto</span>
-                            </button>
-                            <button type="button" class="scenario-option disabled" disabled>
-                                <div class="scenario-thumb scenario-thumb-empty">
-                                    <span>Em breve</span>
-                                </div>
-                                <span class="scenario-label">Setup</span>
-                            </button>
-                        </div>
-                    </div>
+                    <a href="simulador.html" class="btn btn-primary cta-btn">
+                        <span>Abrir simulador</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
                 </div>
-
-                <div class="preview-display">
-                    <div class="preview-stage">
-                        <img class="preview-bg" src="assets/mockup-sala.jpeg" alt="Cenário sala" />
-                        <div class="preview-poster" id="preview-poster">
-                            <span class="preview-empty">Anexe uma imagem<br/>pra ver o resultado</span>
+                <div class="cta-visual" aria-hidden="true">
+                    <span class="cta-badge">PRÉ-VISUALIZE</span>
+                    <div class="cta-stage">
+                        <img src="assets/mockup-sala.jpeg" alt="" />
+                        <div class="cta-stage-poster">
+                            <img src="assets/godofwar.webp" alt="" />
                         </div>
                     </div>
-                    <p class="preview-caption">Pré-visualização aproximada do tamanho real na parede.</p>
                 </div>
             </div>
         </div>
@@ -501,74 +439,6 @@
             <p class="footer-copy">© 2026 POP FRAME. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <script>
-        (function() {
-            const uploadInput   = document.getElementById('upload-input');
-            const uploadHint    = document.getElementById('upload-hint');
-            const previewPoster = document.getElementById('preview-poster');
-            const sizeOptions   = document.querySelectorAll('#size-options .size-option');
-            const rotateBtn     = document.getElementById('rotate-btn');
-
-            // Mapeamento aproximado entre o tamanho do pôster e a largura
-            // ocupada na parede do cenário (em % do palco). A versão paisagem
-            // tem largura maior pois o lado longo passa a ser a horizontal.
-            const sizeMap = {
-                portrait: {
-                    '30x40': 10,
-                    '45x60': 14,
-                    '60x80': 19
-                },
-                landscape: {
-                    '30x40': 13.3,
-                    '45x60': 18.7,
-                    '60x80': 25.3
-                }
-            };
-
-            let currentSize = '45x60';
-            let isLandscape = false;
-
-            function updatePoster() {
-                const orientation = isLandscape ? 'landscape' : 'portrait';
-                previewPoster.style.width = sizeMap[orientation][currentSize] + '%';
-                previewPoster.style.aspectRatio = isLandscape ? '4 / 3' : '3 / 4';
-            }
-
-            // Upload de imagem
-            uploadInput.addEventListener('change', (e) => {
-                const file = e.target.files[0];
-                if (!file) return;
-
-                uploadHint.textContent = file.name;
-
-                const reader = new FileReader();
-                reader.onload = (ev) => {
-                    previewPoster.style.backgroundImage = `url(${ev.target.result})`;
-                    const empty = previewPoster.querySelector('.preview-empty');
-                    if (empty) empty.remove();
-                };
-                reader.readAsDataURL(file);
-            });
-
-            // Seleção de tamanho
-            sizeOptions.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    sizeOptions.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentSize = btn.dataset.size;
-                    updatePoster();
-                });
-            });
-
-            // Girar pôster
-            rotateBtn.addEventListener('click', () => {
-                isLandscape = !isLandscape;
-                rotateBtn.classList.toggle('active', isLandscape);
-                updatePoster();
-            });
-        })();
-    </script>
 
 </body>
 </html>
